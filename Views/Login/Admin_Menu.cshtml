@@ -1,0 +1,28 @@
+﻿@model Admin_Menu
+@{
+    ViewData["Tittle"] = "管理者メニュー";
+}
+
+    <link rel="stylesheet" href="~/css/site.css" />
+
+    <div class="text-center">
+        @*<h1 class="display-4">書籍管理システム</h1>*@
+        <h2 class="display-6">メニュー（管理者）</h2>
+        <hr color="black" width="105%" size="200" align="left">
+        <input type="submit" name="Serch" value="    社員検索    " class="button2" />
+        <input type="submit" name="Serch" value="    書籍検索    " onclick="location.href= 'Serch_BK/index'" class="button1" />
+        <br>
+        <br>
+        <input type="submit" name="Serch" value="    社員登録    " class="button2" />
+        <input type="submit" name="Serch" value="    書籍登録    " class="button1" />
+        <br>
+        <br>
+        <input type="submit" name="Serch" value="    社員編集    " class="button2" />
+        <input type="submit" name="Serch" value="    書籍編集    " class="button1">
+        <br>
+        <br>
+        <DIV align="right" style="margin-right:90px"><input type="submit" value="書籍貸出承認" class="button1" />
+        </DIV>
+
+
+        </DIV>

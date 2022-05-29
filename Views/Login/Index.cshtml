@@ -1,0 +1,34 @@
+﻿@model Login
+@{
+    ViewData["Title"] = "ログイン機能";
+}
+    @*<div class="text-center">*@
+    <div class="Login">
+        <link rel="stylesheet" href="~/css/site.css" />
+
+        <div class="title">
+            <div class="text-center">
+                <br>
+                <h2 class="display-5">ログイン</h2>
+                <br>
+                <hr color="black" width="105%" size="200" align="left">
+                <br>
+            </div>
+            <h2 class="display-12">※ログインID（メールアドレス）とパスワードを入力してください</h2>
+            <form asp-controller="Login" asp-action="Login">
+                <div asp-validation-summary="All" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="@Model.Id" class="h5"></label>
+                    <input asp-for="@Model.Id" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="@Model.Pass" class="h5"></label>
+                    <input asp-for="@Model.Pass" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="ログイン" class="login" />
+                </div>
+            </form>
+        </div>
+    </div>
+    @*</div>*@

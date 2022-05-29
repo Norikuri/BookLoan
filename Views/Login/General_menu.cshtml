@@ -1,0 +1,32 @@
+﻿@model General_menuModel
+@{
+    ViewData["Tittle"] = "メニュー（一般画面）";
+}
+<link rel="stylesheet" href="~/css/site.css" />
+<div class="text-center">
+    @*<h1 class="display-4">書籍管理システム</h1>*@
+    <h2 class="display-6">メニュー</h2>
+    <br>
+    <hr color="black" width="105%" size="200" align="left">
+    <br>
+    <h1><font color="red" font size="4">※現在、システム改修のため、貸出申請を中止しています。</font></h1>
+
+    @*<button1>
+            <big>
+                <input type="submit" name="Serch" value="書籍検索" onclick="location.href= 'Serch_BK/index'" this.style.background=" #0094ff" style="background-color:#0094ff;width:600px;height:80px;"
+                       onmouseover="this.style.background=" #669966" font size="20">
+            </big>
+        </button1>*@
+    <input type="submit" name="Serch" value="    書籍検索    " onclick="location.href= 'Serch_BK/index'" class="button1" />
+    <br>
+    <br>
+
+    @*<button2>
+            <big>
+                <input type="submit" name="Serch" value="貸出申請(使用中止中)" onclick="location.href= 'Serch_BK/index.html'" this.style.background="#ff00dc" style="background-color:#ffa500;width:600px;height:80px;"
+                       onmouseover="this.style.background=" #669966" font size="20">
+            </big>
+        </button2>*@
+    <input type="submit" name="Serch" value="貸出申請(使用中止中)" onclick="location.href= 'Serch_BK/index.html'" class="button2" />
+
+</div>

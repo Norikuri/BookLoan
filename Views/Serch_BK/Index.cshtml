@@ -1,0 +1,74 @@
+﻿@model Serch_BKModel
+@{
+    ViewData["Tittle"] = "書籍検索機能";
+}
+
+    <div class="Serch">
+        <link rel="stylesheet" href="~/css/site.css" />
+        <div class="text-center">
+            <br>
+
+            <h2 class="display-5">書籍検索</h2>
+            <br>
+            <hr color="black" width="105%" size="200" align="left">
+            @*<a asp-controller="Serch_BK" asp-action="IndexMenu">メニュー画面へ</a>*@
+
+
+        </div>
+
+
+        @*検索機能*@
+        <h2 class="display-12">※探したい書籍を入力してください</h2>
+        <form asp-controller="Serch_BK" asp-action="Index">
+            <big>
+                <div asp-validation-summary="All" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="@Model.SelectNmBook"></label><br>
+                    <input asp-for="@Model.SelectNmBook" size="80" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="@Model.SelectPublisher"></label><br>
+                    <input asp-for="@Model.SelectPublisher" size="80">
+                </div>
+                <div class="form-group">
+                    <label asp-for="@Model.SelectNote"></label><br>
+                    <input asp-for="@Model.SelectNote" size="80" />
+                </div>
+
+
+                <input type="submit" value="検索" class="login"/>
+            </big>
+        </form>
+    </div>
+
+<br>
+
+@*書籍情報一覧表*@
+<table border="1">
+  <big>
+  <big>
+
+    <shead>
+        <tr>
+            <td><font size="4"><center>書籍名</center></font></td>
+            <td><font size="4"><center>出版社</center></font></td>
+            <td><font size="4"><center>特記事項</center></font></td>
+
+        </tr>
+    </shead>
+    <tbody>
+        @foreach (var books in Model.BkList)
+        {
+            <tr>
+                <td><font size="4">@books.Nm_book</font></td>
+                <td><font size="4">@books.Publisher</font></td>
+                <td><font size="4">@books.note</font></td>
+            </tr>
+        }
+    </tbody>
+  </big>
+  </big>
+</table>
+
+
+
